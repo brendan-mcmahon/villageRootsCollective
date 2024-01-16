@@ -13,28 +13,50 @@
       <a href="index.html">Home</a>
       <button>Donate</button>
     </nav>
+    <dialog id="melodle-settings-dialog">
+      <form method="dialog">
+        <p>Difficulty:</p>
+        <div class="radio-group">
+          <input type="radio" id="easy" name="gameMode" value="easy" checked />
+          <label for="easy">Easy</label>
+          <br />
+          <input type="radio" id="hard" name="gameMode" value="hard" />
+          <label for="hard">Hard</label>
+        </div>
+
+        <p>Note Labels:</p>
+        <div class="radio-group">
+          <input type="radio" id="notes" name="labels" value="notes" checked />
+          <label for="notes">Letters</label>
+          <br />
+          <!-- <input type="radio" id="numbers" name="labels" value="numbers" />
+          <label for="numbers">Numbers</label>
+          <br /> -->
+          <input type="radio" id="both" name="labels" value="solfege" />
+          <label for="both">Solfege</label>
+        </div>
+        <button id="start-button" type="submit">Start Game</button>
+      </form>
+    </dialog>
+
+    <dialog id="game-over-dialog">
+    </dialog>
 
     <div class="game-container">
       <header>
         <h1>Melodle</h1>
         <button id="playButton" class="btn-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="-2 -2 28 28">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="72"
+            height="72"
+            viewBox="-2 -2 28 28"
+          >
             <path
-              fill="#62c497"
+              fill="#0E9634"
               stroke="none"
               fill-rule="evenodd"
-              d=" 
-  M 0 12
-  A 12 12 0 1 0 24 12
-  A 12 12 0 1 0 0 12
-  Z
-
-  M 10 8
-  L 10 16
-  L 16 12
-  L 10 8
-  Z
-  "
+              d="M 0 12 A 12 12 0 1 0 24 12 A 12 12 0 1 0 0 12 Z M 10 8 L 10 16 L 16 12 L 10 8 Z"
             />
           </svg>
         </button>
@@ -85,18 +107,18 @@
       </div>
 
       <div class="piano">
-        <button id="C4" class="key white"></button>
-        <button id="Db4" class="key black"></button>
-        <button id="D4" class="key white"></button>
-        <button id="Eb4" class="key black"></button>
-        <button id="E4" class="key white"></button>
-        <button id="F4" class="key white"></button>
-        <button id="Gb4" class="key black"></button>
-        <button id="G4" class="key white"></button>
-        <button id="Ab4" class="key black"></button>
-        <button id="A4" class="key white"></button>
-        <button id="Bb4" class="key black"></button>
-        <button id="B4" class="key white"></button>
+        <button id="C4" class="key white">C</button>
+        <button id="Db4" class="key black">D♭</button>
+        <button id="D4" class="key white">D</button>
+        <button id="Eb4" class="key black">E♭</button>
+        <button id="E4" class="key white">E</button>
+        <button id="F4" class="key white">F</button>
+        <button id="Gb4" class="key black">G♭</button>
+        <button id="G4" class="key white">G</button>
+        <button id="Ab4" class="key black">A♭</button>
+        <button id="A4" class="key white">A</button>
+        <button id="Bb4" class="key black">B♭</button>
+        <button id="B4" class="key white">B</button>
       </div>
 
       <div class="buttons">
@@ -127,6 +149,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="common.js"></script>
     <script src="melodle.js"></script>
   </body>
 </html>

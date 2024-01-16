@@ -6,6 +6,44 @@ html {
   height: 100%;
 }
 
+dialog {
+  border-radius: 5px;
+  border: none;
+}
+dialog p {
+  margin: 0;
+}
+dialog .radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+}
+dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+dialog input[type=radio] {
+  display: none;
+}
+dialog label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+dialog input[type=radio]:checked + label {
+  background-color: var(--black);
+  color: white;
+}
+
 .game-container {
   padding: 0 1rem;
   display: flex;
@@ -63,14 +101,18 @@ html {
   grid-row: 1/span 2;
   border-radius: 0;
   padding: inherit;
+  align-items: flex-end;
+  justify-content: center;
 }
 .game-container .piano .key.white {
   background-color: white;
 }
 .game-container .piano .key.black {
   background-color: #000;
+  color: white;
   z-index: 1;
   grid-row: 1/span 1;
+  font-size: 1.1rem;
 }
 .game-container .piano #C4 {
   grid-column: 1/3;
