@@ -1,6 +1,6 @@
 :root {
   --yellow: #fed45f;
-  --green: #62c497;
+  --green: #0E9634;
   --black: #011917;
   --white: #fffeed;
   --brown: #a66014;
@@ -13,7 +13,7 @@
 body {
   background-color: var(--white);
   font-family: "vividly", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: var(--black);
 }
 
@@ -76,16 +76,30 @@ button {
   font-family: "vividly", sans-serif;
 }
 
-blockquote {
+.mission {
+  margin: 1rem;
+}
+
+.quotes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0.5rem;
+}
+.quotes blockquote {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
-  margin: 1rem;
+  margin: 0.5rem;
   padding: 0.7rem;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
-blockquote p {
+.quotes blockquote a > p {
+  font-size: 1.2rem;
+  color: var(--white);
   margin: 0;
   margin-bottom: 1rem;
 }
