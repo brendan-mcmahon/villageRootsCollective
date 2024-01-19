@@ -1,42 +1,82 @@
 :root {
-  --yellow: #fed45f;
-  --green: #0E9634;
+  --yellow: #f3bc06;
+  --green: #a1b37d;
   --black: #011917;
   --white: #fffeed;
   --brown: #a66014;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "vividly";
   src: url("./assets/Vividly-Regular.otf") format("truetype");
 }
+html {
+  height: 100vh;
+  width: 100%;
+}
+
 body {
-  background-color: var(--white);
   font-family: "vividly", sans-serif;
   font-size: 1.5rem;
   color: var(--black);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: linear-gradient(to bottom, var(--white) 50%, var(--green) 50%);
+  margin: 0;
   padding: 1rem;
 }
 
-header {
+.page {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: 8vh 24vh repeat(4, minmax(0, 16vh));
+  grid-template-areas: "clouds        clouds   3        4      donate     donate" "clouds        clouds   tree     tree   links      links" "k-house       j-house  tree     tree   links      links" "k-house       j-house  tree     tree   .          quotes" "25            phil        phil        phil      phil          quotes" "31            phil     phil     phil   phil       copyright";
+}
+
+.image-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  text-transform: uppercase;
+  justify-content: center;
+}
+.image-container#mrs-k {
+  grid-area: k-house;
+  transform: translate(0.5vw, -4vh);
+}
+.image-container#mrs-k img {
+  transform: scaleX(-1);
+}
+.image-container#mrs-k:hover {
+  transform: translate(0.5vw, -4vh) scale(1.1);
+}
+.image-container#mrs-j {
+  grid-area: j-house;
+  transform: translate(-0.5vw, 4vh);
+}
+.image-container#mrs-j:hover {
+  transform: translate(-0.5vw, 4vh) scale(1.1);
+}
+.image-container#tree {
+  grid-area: tree;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
   font-size: 4rem;
   padding: 0;
   margin: 0;
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 100px;
+  text-align: center;
 }
 
 h2 {
@@ -81,27 +121,88 @@ button {
 }
 
 .quotes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0.5rem;
+  grid-area: quotes;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
 .quotes blockquote {
-  background-color: var(--black);
-  color: var(--white);
-  text-align: center;
+  text-align: right;
   margin: 0.5rem;
+  margin-top: 2rem;
   padding: 0.7rem;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.quotes blockquote a > p {
-  font-size: 1.2rem;
-  color: var(--white);
+.quotes blockquote p {
+  font-size: 1.5rem;
   margin: 0;
   margin-bottom: 1rem;
+}
+
+.philosophy-container {
+  grid-area: phil;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "title title title" "quote1 quote2 quote3";
+  column-gap: 1rem;
+}
+.philosophy-container h1 {
+  grid-area: title;
+  text-align: center;
+  border: solid 4px var(--green);
+  width: 50%;
+  justify-self: center;
+}
+.philosophy-container p {
+  color: var(--white);
+  text-align: center;
+}
+
+.links {
+  grid-area: links;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  align-items: center;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  padding: 1rem;
+}
+.links .block-link {
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.links .block-link:nth-child(even) {
+  background-color: var(--green);
+}
+.links .block-link:nth-child(odd) {
+  background-color: var(--yellow);
+}
+
+.donate-button {
+  grid-area: donate;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100rem;
+  font-size: 4rem;
+}
+.donate-button button {
+  margin: 1rem;
 }
 
 /*# sourceMappingURL=index.css.map */

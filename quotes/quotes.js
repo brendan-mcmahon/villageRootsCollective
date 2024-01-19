@@ -68,7 +68,7 @@ const quotes = [
   },
 ]
 
-const randomQuotes = getRandomElements(quotes, 4)
+const randomQuotes = getRandomElements(quotes, 2)
 
 const quotesDiv = document.querySelector('.quotes')
 

@@ -45,17 +45,24 @@ dialog {
         transition: background-color 0.2s ease-in-out;
     }
 
-    input[type="radio"]:checked+label {
+    input[type="radio"]:checked + label {
         background-color: var(--black);
         color: white;
     }
 }
 
+.game-container-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .game-container {
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 396px;
 
     header {
         grid-area: header;
@@ -65,13 +72,23 @@ dialog {
         width: 100%;
         padding: 0;
         margin-bottom: 1rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        #playButton {
+            svg > path {
+                fill: var(--green);
+            }
+        }
     }
 
     .squares {
         grid-area: squares;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 66.87px);
+        grid-template-rows: repeat(6, 2rem);
         grid-gap: 13px;
         margin-bottom: 1rem;
 
@@ -86,12 +103,16 @@ dialog {
                 display: flex;
                 flex-direction: column;
                 border: solid var(--black) 1px;
-                height: 66.87px;
-                width: 66.87px;
-                font-size: 4rem;
+                height: 2rem;
+                width: 2rem;
+                font-size: 3rem;
                 text-align: center;
                 align-items: center;
                 justify-content: center;
+
+                span {
+                    transform: translateY(2.5px);
+                }
             }
         }
     }
@@ -101,8 +122,7 @@ dialog {
         display: grid;
         width: 100%;
         grid-template-columns: repeat(17, 1fr);
-        grid-template-columns:
-            1fr 0.25fr 0.25fr 0.75fr 0.25fr 0.25fr 1fr 1fr 0.25fr 0.25fr 0.75fr 0.25fr 0.25fr 0.75fr 0.25fr 0.25fr 1fr;
+        grid-template-columns: 1fr 0.25fr 0.25fr 0.75fr 0.25fr 0.25fr 1fr 1fr 0.25fr 0.25fr 0.75fr 0.25fr 0.25fr 0.75fr 0.25fr 0.25fr 1fr;
         grid-template-rows: 2fr 1fr;
         height: 10rem;
 
@@ -125,7 +145,7 @@ dialog {
                 color: white;
                 z-index: 1;
                 grid-row: 1 / span 1;
-                font-size: 1.1rem;
+                font-size: .75rem;
             }
         }
 
@@ -184,7 +204,8 @@ dialog {
         justify-content: space-between;
         width: 100%;
         padding: 0;
-        margin: 1rem 0;
+        margin: .5rem 0;
+        font-size: 1rem;
 
         #submit:disabled {
             background-color: grey;
@@ -204,5 +225,14 @@ dialog {
         padding: 0;
 
         // button with id of "submit" needs disabled styles
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
