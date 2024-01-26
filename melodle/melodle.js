@@ -1,6 +1,6 @@
-import { melodyForToday, solfegeLabels } from "./melody.js";
-import { colors } from "../styles.js";
-import { save, getScores } from "./storage.js";
+import { melodyForToday, solfegeLabels } from path.resolve(__dirname, "../melody.js");
+import { colors } from path.resolve(__dirname, "../../styles.js");
+import { save, getScores } from path.resolve(__dirname, "./storage.js");
 
 const currentDate = new Date().toISOString().split("T")[0];
 

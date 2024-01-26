@@ -1,0 +1,11 @@
+<h2 class="meet">Meet our Teachers</h2>
+
+<a id="mrs-k" href="./teachers/teachers.html?teacher=mrsk" class="image-container">
+  <img src="./assets/Krystall house.png" alt="Mrs. K's House" />
+  <h2>Mrs. K</h2>
+</a>
+<a id="mrs-j" href="./teachers/teachers.html?teacher=mrsjamie" class="image-container">
+  <img src="./assets/Jamie house v2.png" alt="Mrs. Jamie's House" />
+  <h2>Mrs. Jamie</h2>
+</a>
+

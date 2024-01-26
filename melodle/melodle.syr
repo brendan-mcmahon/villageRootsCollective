@@ -11,8 +11,6 @@
   </head>
   <body>
 
-    {nav}    
-    
     <dialog id="melodle-settings-dialog">
       <form method="dialog">
         <p>Difficulty:</p>

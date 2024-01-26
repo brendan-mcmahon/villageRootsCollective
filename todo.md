@@ -1,23 +1,18 @@
 # TODO
 ## Content to add
-* Bios for each teacher - houses
-* Events Calendar - calendar
-* Enrollment Info - ???
-    * Enrollment Form
-    * Tuition
-* What a day looks like - Kids playing
+* Calendar Page
+* Enrollment Page
+* Programs Page
 * Contact Info
-    * Phone
-    * Email
-* Socials
-    * Facebook - logo
-    * Instagram - logo
-* Blog?
+* Copyright
 
 ## Website stuff
 * Favicon
 * Logo
-* Copyright?
+* a11y
+
+## Fixes
+* New version of Krystall's house with the gnome behind the wall
 
 ## Fun stuff
 * Melodle

@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachers</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./teachers.css" />
+  </head>
+  <body>
+    <div id="teacher-slider" style="transform: translateX(0dvw)">
+      <div id="mrs-k" class="teacher">
+          <div class="imageContainer circle">
+    <img src="../assets/Mrs-K-profile.png" alt="Mrs. K" />
+  </div>
+  <h1>Mrs. K</h1>
+  <div class="blurbs">
+    <div class="blurb">
+      <h2>Welcome</h2>
+      <article>
+        <img src="../assets/Mrs-K-3.png" alt="pic 1" /> Hello and Welcome to Village Roots Collective! I’m so happy
+        you’re here! My name is Krystall DeBoy, but you can call me Mrs. K, and I will be your teacher this year. A
+        little about myself… I live in Hendricks County with my amazing husband Joe and our 2 beautiful children, Isaac
+        and Addison. We also share our home with our 2 cats, Max and Lucky. In my free time I love to ground myself with
+        the Earth. Nature is my happy and healing place☺ I’m excited for what’s to come and I look forward to getting to
+        know you and your child this year!
+      </article>
+    </div>
+    <div class="blurb">
+      <h2>Experience</h2>
+      <article>
+        <img src="../assets/Mrs-K-1.png" alt="pic 2" style="float: right" />
+        I started in the co-op world in 2013 as a parent/stay at home mom with my son. I joined the board as
+        Co-President and held that position until May 2016, when both of my kids went to public school full time. In
+        November 2016, I accepted a position in my children's school district working in Special Education with children
+        of all abilities until May 2018. In August of 2018 I became a co-op teacher and have been teaching ever since.
+      </article>
+    </div>
+    <div class="blurb">
+      <h2>My Favorites</h2>
+      <ul>
+        <li><strong>Color:</strong> Tie-Dye</li>
+        <li><strong>Animal:</strong> Penguin</li>
+        <li><strong>Drink:</strong> Sweet Tea</li>
+        <li><strong>Candy:</strong> Anything sour</li>
+        <li><strong>Food:</strong> Cheese & Pickles</li>
+        <li><strong>Flower:</strong> Sunflower</li>
+        <li><strong>Restaurant:</strong> McAlisters Deli</li>
+        <li><strong>Store:</strong> Meijer & Menards</li>
+        <li><strong>Movie:</strong> Alice in Wonderland (the original)</li>
+        <li><strong>Holiday:</strong> Halloween & Christmas</li>
+        <li><strong>Season:</strong> Fall</li>
+        <li><strong>Obsession:</strong> Gnomes & Disney</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+        <button id="switch-teacher-button" onclick="switchTeacher()">Mrs. Jamie <img src="../assets/Arrow.png" /></button>
+      </div>
+      <div id="mrs-jamie" class="teacher">
+        <div class="imageContainer circle">
+  <img src="../assets/jamie-profile.jpg" alt="Mrs. Jamie" />
+</div>
+<h1>Mrs. Jamie</h1>
+<div class="blurbs">
+  <div class="blurb">
+    <h2>Hello!</h2>
+    <article>
+      <img src="../assets/Mrs-K-3.png" alt="pic 1" /> My name is Jamie McMahon. I am the Chief Executive Officer and
+      Executive Director of Village Roots Collective. That makes me sound really fancy and mature, but those who know me
+      well can tell you that, most of the time, I have more in common with our 5-year-old students than I do other
+      adults. The greatest joy of this work is being invited into a child's world of imagination, curitosity,
+      creativity, and fun. I am passionate about providing an environment in which kids are free to be their most
+      authentic selves, where they will be celebrated for their uniqueness and met with respect, admiration, and
+      encouragement. Children are whole humans, not smaller adults. At Village Roots, we focus on caring for who our
+      students are today, without adding pressure of expectation of who they will be tomorrow.
+    </article>
+  </div>
+  <div class="blurb">
+    <h2>In my personal life,</h2>
+    <article>
+      <img src="../assets/Mrs-K-1.png" alt="pic 2" style="float: right" />
+      I enjoy spending time with my husband, Brendan, and two kiddos, Addie & Walter. My hobbies include all things arts
+      & crafts, listening to true crime podcasts, and board games. My idea of a perfect night is sipping on a fresh
+      glass of iced tea as I watch a good movie under the stars from my cozy hammock.
+    </article>
+  </div>
+  <div class="blurb">
+    <h2>My Favorites</h2>
+    <ul>
+      <li><strong>Color:</strong> Yellow</li>
+      <li><strong>Animal:</strong> Elephants</li>
+      <li><strong>Drink:</strong> Iced Tea, Dirty Vanilla Chai Tea</li>
+      <li><strong>Music:</strong> Jason Mraz, Ben Folds, & Sara Bareilles</li>
+      <li><strong>Food:</strong> Ramen, Acai Bowls, & Seafood</li>
+      <li><strong>Flower:</strong> Sunflower</li>
+      <li><strong>Movie:</strong> Tangled</li>
+      <li><strong>TV Show:</strong> Friends, Parks & Rec</li>
+      <li><strong>Holiday:</strong> Christmas</li>
+      <li><strong>Season:</strong> Summer</li>
+      <li><strong>Podcasts:</strong> Crime Junkie, The Deck, & Sawbones</li>
+      <li><strong>Quote:</strong> "You can do hard things!"</li>
+    </ul>
+  </div>
+</div>
+
+        <button id="switch-teacher-button" onclick="switchTeacher()"> <img src="../assets/Arrow.png" /> Mrs. K</button>
+      </div>
+    </div>
+
+    <script>
+      function getInitialTeacher(query = window.location.search) {
+        const params = new URLSearchParams(query);
+        return params.get("teacher");
+      }
+
+      let currentTeacher = getInitialTeacher();
+
+      function switchTeacher(teacher) {
+        const teachers = document.getElementById("teacher-slider");
+        switch (currentTeacher) {
+          case "mrsk":
+            currentTeacher = "mrsjamie";
+            teachers.style.transform = "translateX(0dvw)";
+            break;
+
+          case "mrsjamie":
+            currentTeacher = "mrsk";
+            teachers.style.transform = "translateX(-100dvw)";
+            break;
+        }
+      }
+      switchTeacher(currentTeacher);
+    </script>
+
+    <script>
+        const imageContainers = document.getElementsByClassName("imageContainer");
+
+        Array.from(imageContainers).forEach(container => {
+            container.addEventListener("mouseover", function () {
+                console.log("hovered");
+                this.classList.add("expanded");
+            });
+
+            container.addEventListener("mouseout", function () {
+                this.classList.remove("expanded");
+            });
+
+            container.addEventListener("click", function () {
+                this.classList.toggle("expanded");
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -1,4 +1,5 @@
 -- syringe inject
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,123 +9,28 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
- <div class="page">
-  <button class="donate-button">Donate</button>
+    <div class="page">
+      <div id="sky"></div>
+      <button class="donate-button">Donate</button>
 
-    <a id="mrs-k" href="/mrs-k.html" class="image-container">
-      <img src="./assets/Jamie house.png" alt="Mrs. K's House" />
-      <h2>Mrs. K</h2>
-    </a>
-    <a id="mrs-j" href="/mrs-jamie.html" class="image-container">
-      <img src="./assets/Jamie house.png" alt="Mrs. Jamie's House" />
-      <h2>Mrs. Jamie</h2>
-    </a>
 
-    <div id="tree" class="image-container">
-      <img src="./assets/Logo.png" alt="Village Roots Collective Logo" />
-    </div>
+      <div id="tree" class="image-container">
+        <img src="./assets/Logo v3.png" alt="Village Roots Collective Logo" />
+      </div>
+      
+      {{ philosophy }}
 
-    <div class="links">
-        <a class="block-link">Home</a>
-        <a class="block-link">Our Philosophy</a>
-        <a class="block-link">Our Teachers</a>
-        <a class="block-link">Our Classes</a>
-        <a class="block-link">Our Community</a>
-        <a class="block-link">Our Location</a>
-    </div>
+      {{ teacherBlock }}
 
-    <div class="philosophy-container">
-      <h1>Our Philosophy</h1>
-      <p>
-        Village Roots Collective embraces the philosophy that it takes a village
-        not just to raise a child, but to nurture a family.
+      {{ linkBlocks }}
+
+      {{ quotes }}
+
+      <p class="copyright">© 2024 Village Roots Collective
+        <br />
+        <a href="./termsOfUse.html">Terms of Use</a>
       </p>
-      <p>
-        Our mission is to foster a supportive community through cooperative
-        early childhood education, homeschooling support, and enriching social
-        opportunities.
-      </p>
-      <p>
-        We are dedicated to cultivating an inclusive environment where every
-        family thrives together.
-      </p>
+
     </div>
-
-    <div class="quotes"></div>
-    </div>
-    <script src="./quotes/quotes.js"></script>
-<script>
-    ( function() {
-                var insertErrorMessage = function (message) {
-                    jQuery('script').each(function (i, e) {
-                        var js = jQuery(e)[0].src || '';
-                        if (js.indexOf('73729.js') > 0)
-                            jQuery(e).after('<p style="color: red">' + message + '</p>');
-                    });
-                };
-                var fetchWidget = function () {
-                  
-                    if (window.ActiveXObject) { // they are using IE < 11, which doesn't support TLS 1.1
-                        insertErrorMessage('Your browser does not support the minimum security requirements for keeping your Credit Card information safe when processing payments. Please upgrade your browser or download the latest version of' + 
-                        ' <a target=\'_blank\' href=\'https://www.google.com/chrome/browser/desktop/\'>Chrome</a> or <a target=\'_blank\' href=\'https://www.mozilla.org/en-US/firefox/new/\'>Firefox</a>.');
-                    }
-                    else {
-                      Bloomerang.Util.requireJQueryValidation(function() {
-                        Bloomerang.useKey('pub_6d48d9f3-8e1e-11ee-b38a-0242ac140007');
-		  
-                        var success = function(result) { 
-                            eval(result.WidgetJavascript);
-
-                            // Set payment intent properties
-                            Bloomerang.StripePaymentElement = {
-                                PaymentIntentId: result.PaymentElement.PaymentIntentId,
-                                ClientSecret: result.PaymentElement.ClientSecret,
-                                CustomerId: result.PaymentElement.CustomerId
-                            };
-                        };
-                        var failure = function() { 
-                            insertErrorMessage('Membership form could not be loaded. Please try again later.');
-                        };
-
-                        var data = {
-                            ServedSecurely: (window.location.protocol == 'https:' || window.location.href.indexOf('http://localhost:') == 0),
-                            FormUrl: window.location.href
-                        };
-
-                        Bloomerang.Api._post('v1/Widget/73729', data, success, failure);
-                    });
-                    }
-                };
-                var startBloomerangLoad = function() {
-                    if (window.bloomerangLoadStarted == undefined) {
-                        window.bloomerangLoadStarted = true;
-                        var script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = 'http://localhost:9090/Content/Scripts/Api/Bloomerang-v2.js?nocache=1702307772';
-                        document.getElementsByTagName('head')[0].appendChild(script);
-                        waitForBloomerangLoad(fetchWidget);
-                    }
-                    else {
-                        waitForBloomerangLoad(fetchWidget);
-                    }
-                };
-
-                var waitForBloomerangLoad = function(callback) {
-                    if (typeof(Bloomerang) === 'undefined' || !Bloomerang._isReady) {
-                        setTimeout(function () { waitForBloomerangLoad(callback) }, 500);
-                    }
-                    else {
-                        if (true) {
-                            callback();
-                        } else {
-                            window.bloomerangLoadStarted = undefined;
-                            Bloomerang = undefined; // The version of Blomerang.js is not what we want. So blow it away and reload.
-                            startBloomerangLoad();
-                        }
-                    }
-                };
-
-                startBloomerangLoad();})();
-                </script>
   </body>
 </html>

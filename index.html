@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,123 +8,181 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
- <div class="page">
-  <button class="donate-button">Donate</button>
+    <div class="page">
+      <div id="sky"></div>
+      <button class="donate-button">Donate</button>
 
-    <a id="mrs-k" href="/mrs-k.html" class="image-container">
-      <img src="./assets/Jamie house.png" alt="Mrs. K's House" />
-      <h2>Mrs. K</h2>
-    </a>
-    <a id="mrs-j" href="/mrs-jamie.html" class="image-container">
-      <img src="./assets/Jamie house.png" alt="Mrs. Jamie's House" />
-      <h2>Mrs. Jamie</h2>
-    </a>
 
-    <div id="tree" class="image-container">
-      <img src="./assets/Logo.png" alt="Village Roots Collective Logo" />
-    </div>
+      <div id="tree" class="image-container">
+        <img src="./assets/Logo v3.png" alt="Village Roots Collective Logo" />
+      </div>
+      
+      <div class="philosophy-container">
+  <h1>Our Philosophy</h1>
+  <p>
+    Village Roots Collective embraces the philosophy that it takes a village not just to raise a child, but to nurture a
+    family.
+  </p>
+  <p>
+    Our mission is to foster a supportive community through cooperative early childhood education, homeschooling
+    support, and enriching social opportunities.
+  </p>
+  <p>We are dedicated to cultivating an inclusive environment where every family thrives together.</p>
+</div>
 
-    <div class="links">
-        <a class="block-link">Home</a>
-        <a class="block-link">Our Philosophy</a>
-        <a class="block-link">Our Teachers</a>
-        <a class="block-link">Our Classes</a>
-        <a class="block-link">Our Community</a>
-        <a class="block-link">Our Location</a>
-    </div>
 
-    <div class="philosophy-container">
-      <h1>Our Philosophy</h1>
-      <p>
-        Village Roots Collective embraces the philosophy that it takes a village
-        not just to raise a child, but to nurture a family.
-      </p>
-      <p>
-        Our mission is to foster a supportive community through cooperative
-        early childhood education, homeschooling support, and enriching social
-        opportunities.
-      </p>
-      <p>
-        We are dedicated to cultivating an inclusive environment where every
-        family thrives together.
-      </p>
-    </div>
+      <h2 class="meet">Meet our Teachers</h2>
 
-    <div class="quotes"></div>
-    </div>
-    <script src="./quotes/quotes.js"></script>
+<a id="mrs-k" href="./teachers/teachers.html?teacher=mrsk" class="image-container">
+  <img src="./assets/Krystall house.png" alt="Mrs. K's House" />
+  <h2>Mrs. K</h2>
+</a>
+<a id="mrs-j" href="./teachers/teachers.html?teacher=mrsjamie" class="image-container">
+  <img src="./assets/Jamie house v2.png" alt="Mrs. Jamie's House" />
+  <h2>Mrs. Jamie</h2>
+</a>
+
+
+
+      <div class="links">
+  <div class="block-link">
+    <a><img src="./assets/icons/programs.png" /></a>
+  </div>
+  <div class="block-link">
+    <a><img src="./assets/icons/calendar.png" /></a>
+  </div>
+  <div class="block-link">
+    <a><img src="./assets/icons/enrollment.png" /></a>
+  </div>
+  <div class="block-link">
+    <a href="https://www.facebook.com/VillageRootsCollective/" target="_blank"><img src="./assets/icons/facebook.png" /></a>
+  </div>
+  <div class="block-link">
+    <a href="https://www.instagram.com/village.roots.collective/" target="_blank"><img src="./assets/icons/instagram.png" /></a>
+  </div>
+  <div class="block-link">
+    <a><img src="./assets/icons/melodle.png" /></a>
+  </div>
+</div>
+
+
+      <div class="quotes"></div>
+<!-- <script src="./quotes/quotes.js"></script> -->
 <script>
-    ( function() {
-                var insertErrorMessage = function (message) {
-                    jQuery('script').each(function (i, e) {
-                        var js = jQuery(e)[0].src || '';
-                        if (js.indexOf('73729.js') > 0)
-                            jQuery(e).after('<p style="color: red">' + message + '</p>');
-                    });
-                };
-                var fetchWidget = function () {
-                  
-                    if (window.ActiveXObject) { // they are using IE < 11, which doesn't support TLS 1.1
-                        insertErrorMessage('Your browser does not support the minimum security requirements for keeping your Credit Card information safe when processing payments. Please upgrade your browser or download the latest version of' + 
-                        ' <a target=\'_blank\' href=\'https://www.google.com/chrome/browser/desktop/\'>Chrome</a> or <a target=\'_blank\' href=\'https://www.mozilla.org/en-US/firefox/new/\'>Firefox</a>.');
-                    }
-                    else {
-                      Bloomerang.Util.requireJQueryValidation(function() {
-                        Bloomerang.useKey('pub_6d48d9f3-8e1e-11ee-b38a-0242ac140007');
-		  
-                        var success = function(result) { 
-                            eval(result.WidgetJavascript);
+    const quotes = [
+  {
+    text:
+      'Play is often talked about as if it were a relief from serious learning. But for children play is serious learning. Play is really the work of childhood.',
+    citation: 'Mister Rogers',
+    url: 'https://www.goodreads.com/book/show/728131.You_Are_Special'
+  },
+  {
+    text: 'Play is our brain’s favorite way of learning.',
+    citation: 'Diane Ackerman',
+    url: 'https://www.dianeackerman.com/'
+  },
+  {
+    text:
+      'The act of creating for young children is about the process, not the outcome. Children need to explore, take risks, make their own choices. This is the richness of creativity. This is the groundwork for future problem solvers.',
+    citation: 'Meri Cherry',
+    url: 'https://www.mericherry.com/'
+  },
+  {
+    text: 'Play is the highest form of research.',
+    citation: 'Albert Einstein',
+    url: 'https://en.wikipedia.org/wiki/Albert_Einstein'
+  },
+  {
+    text:
+      'Children need the freedom to appreciate the infinite resources of their hands, their eyes and their ears, the resources of forms, materials, sounds and colors.',
+    citation: 'Loris Malaguzzi',
+    url: 'https://en.wikipedia.org/wiki/Reggio_Emilia_approach'
+  },
+  {
+    text:
+      "The goal of early childhood education should be to activate the child's own natural desire to learn",
+    citation: 'Maria Montessori',
+    url: 'https://en.wikipedia.org/wiki/Maria_Montessori'
+  },
+  {
+    text:
+      'We worry about what a child will become tomorrow, yet we forget that he is someone today.',
+    citation: 'Stacia Tauscher',
+  },
+  {
+    text: 'The children are the curriculum',
+    citation: 'Lisa Murphy',
+    url: 'https://www.ooeygooey.com/'
+  },
+  {
+    text: 'Time spent playing with children is never time wasted',
+    citation: 'Dawn Lantero',
+    url: "http://www.splashparenting.com/"
+  },
+  {
+    text:
+      "Think of playtime as an innovation lab where tomorrow's civilization is being actively designed",
+    citation: 'Jordan Shapiro',
+    url: 'https://www.jordanshapiro.org/'
+  },
+  {
+    text:
+      "Early Childhood Educators are more powerful than simply 'being good with children.' Their real power is the ability to remember what it feels like to be a brand new human, to appreciate the magic in discovery, and to want to share that with children in a fun, positive, meaningful and lasting way- all at the same moment",
+    citation: 'Nancy Kopman',
+    url: 'https://nancykopman.com/'
+  },
+  {
+    text:
+      'It takes a village to raise a child. This is true. But it also takes a village to be a human. To feel connected. To Thrive',
+    citation: 'Meaghan Dawson (BeautyFromBurntToast)',
+    url: 'https://www.beautyfromburnttoast.com/'
+  },
+]
 
-                            // Set payment intent properties
-                            Bloomerang.StripePaymentElement = {
-                                PaymentIntentId: result.PaymentElement.PaymentIntentId,
-                                ClientSecret: result.PaymentElement.ClientSecret,
-                                CustomerId: result.PaymentElement.CustomerId
-                            };
-                        };
-                        var failure = function() { 
-                            insertErrorMessage('Membership form could not be loaded. Please try again later.');
-                        };
+const randomQuotes = getRandomElements(quotes, 2)
 
-                        var data = {
-                            ServedSecurely: (window.location.protocol == 'https:' || window.location.href.indexOf('http://localhost:') == 0),
-                            FormUrl: window.location.href
-                        };
+const quotesDiv = document.querySelector('.quotes')
 
-                        Bloomerang.Api._post('v1/Widget/73729', data, success, failure);
-                    });
-                    }
-                };
-                var startBloomerangLoad = function() {
-                    if (window.bloomerangLoadStarted == undefined) {
-                        window.bloomerangLoadStarted = true;
-                        var script = document.createElement('script');
-                        script.type = 'text/javascript';
-                        script.src = 'http://localhost:9090/Content/Scripts/Api/Bloomerang-v2.js?nocache=1702307772';
-                        document.getElementsByTagName('head')[0].appendChild(script);
-                        waitForBloomerangLoad(fetchWidget);
-                    }
-                    else {
-                        waitForBloomerangLoad(fetchWidget);
-                    }
-                };
+randomQuotes.forEach((quote) => {
+  const blockquote = document.createElement('blockquote');
+  const p = document.createElement('p');
+  p.textContent = quote.text;
+  blockquote.appendChild(p)
 
-                var waitForBloomerangLoad = function(callback) {
-                    if (typeof(Bloomerang) === 'undefined' || !Bloomerang._isReady) {
-                        setTimeout(function () { waitForBloomerangLoad(callback) }, 500);
-                    }
-                    else {
-                        if (true) {
-                            callback();
-                        } else {
-                            window.bloomerangLoadStarted = undefined;
-                            Bloomerang = undefined; // The version of Blomerang.js is not what we want. So blow it away and reload.
-                            startBloomerangLoad();
-                        }
-                    }
-                };
+  if (quote.url) {
+    const a = document.createElement('a');
+    a.href = quote.url;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
 
-                startBloomerangLoad();})();
-                </script>
+    a.appendChild(p);
+    blockquote.appendChild(a);
+  } else {
+    blockquote.appendChild(p);
+  }
+
+  if (quote.citation) {
+    const cite = document.createElement('cite');
+    cite.textContent = quote.citation;
+    blockquote.appendChild(cite);
+  }
+ 
+  quotesDiv.appendChild(blockquote);
+});
+
+
+function getRandomElements(array, count) {
+  const shuffled = array.sort(() => 0.5 - Math.random())
+  return shuffled.slice(0, count)
+}
+
+</script>
+
+      <p class="copyright">© 2024 Village Roots Collective
+        <br />
+        <a href="./termsOfUse.html">Terms of Use</a>
+      </p>
+
+    </div>
   </body>
 </html>
