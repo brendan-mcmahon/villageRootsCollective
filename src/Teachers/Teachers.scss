@@ -1,5 +1,4 @@
-body:has(#teacher) {
-
+body:has(.teacher) {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,7 +6,8 @@ body:has(#teacher) {
     overflow: hidden;
     height: 100%;
 
-    .teacher {
+    #teacher {
+        margin-top: 1rem;
         max-width: 100%;
         display: grid;
         grid-template-columns: 1fr;
@@ -43,30 +43,7 @@ body:has(#teacher) {
             height: 55dvh;
         }
 
-        &#mrs-k {
-            .blurbs {
-                background-image: url("../assets/tie-dye-2.png");
-                background-size: cover;
-                background-position: center center;
-            }
-
-            #switch-teacher-button > img {
-                margin-left: 1rem;
-                transform: rotate(180deg);
-            }
-        }
-
-        &#mrs-jamie {
-            .blurbs {
-                background-image: url("../assets/sunflowers.png");
-                background-repeat: repeat;
-                background-size: 15rem;
-            }
-
-            #switch-teacher-button > img {
-                margin-right: 1rem;
-            }
-        }
+       
 
         .blurb {
             margin: 3rem 1rem;
@@ -76,7 +53,7 @@ body:has(#teacher) {
             font-family: "vividly", sans-serif;
             width: 33%;
             background-color: var(--white);
-            border: solid var(--black) 5px;
+            // border: solid var(--black) 5px;
             border-radius: 1rem;
 
             article,
@@ -110,6 +87,31 @@ body:has(#teacher) {
                 width: auto;
                 margin: 0;
             }
+        }
+    }
+
+    #mrs-k {
+        .blurbs {
+            background-image: url("../assets/tie-dye-2.png");
+            background-size: cover;
+            background-position: center center;
+        }
+
+        #switch-teacher-button > img {
+            margin-left: 1rem;
+            transform: rotate(180deg);
+        }
+    }
+
+    #mrs-jamie {
+        .blurbs {
+            background-color: var(--yellow);
+            background-repeat: repeat;
+            background-size: 15rem;
+        }
+
+        #switch-teacher-button > img {
+            margin-right: 1rem;
         }
     }
 }
@@ -155,6 +157,9 @@ body:has(#teacher) {
         .teacher-container > .teacher {
             margin: 1rem;
             max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
             .blurbs {
                 flex-direction: column;

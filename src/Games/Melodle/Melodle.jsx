@@ -22,6 +22,7 @@ const copyGuesses = (arr) => {
 
 const Melodle = () => {
   const melodyLength = melody.notes.filter((n) => !!n.pitch).length;
+  console.log("length", melodyLength)
   const cursor = useCursor(allowedAttempts, melodyLength);
   const [showSettingsModal, setShowSettingsModal] = useState(true);
   const [settings, setSettings] = useState({ difficulty: "easy" });
@@ -35,6 +36,7 @@ const Melodle = () => {
   const readyToSubmit = gameOverStatus === null && guesses[cursor.row].every((guess) => guess?.note !== null);
 
   useEffect(() => {
+    //TODO: we should check to make sure we're actually getting the one for today in some way
     const scores = getScores();
     const today = justDate(new Date());
     const todaysScore = scores.filter((s) => s.date === today)[0];
@@ -121,10 +123,10 @@ const Melodle = () => {
         <header>
           <h1>Melodle</h1>
           {gameOverStatus && <h2>{gameOverStatus}</h2>}
-          <PlayButton synth={synth} />
+          <PlayButton synth={synth} melody={melody} />
         </header>
 
-        <Squares guesses={guesses} melodyLength={melodyLength} cursor={cursor} readyToSubmit={readyToSubmit} />
+        <Squares guesses={guesses} melodyLength={melodyLength} readyToSubmit={readyToSubmit} />
 
         <PianoKeyboard onKeyPress={onKeyPress} />
 

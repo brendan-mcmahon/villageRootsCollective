@@ -1,4 +1,5 @@
 export function getRange(melody) {
+  console.log(melody);
   const [min, max] = minMax(melody);
 
   var notes = allNotes.slice(allNotes.indexOf(min), allNotes.indexOf(max) + 1);
@@ -23,7 +24,7 @@ export function getRange(melody) {
 
 export function generateGridTemplateColumns(pitches) {
   const firstPitch = pitches[0].slice(0, -1);
-  let gridTemplateColumns = firstPitch === "B" || firstPitch === "E" ? "1.25fr " : "1fr ";
+  let gridTemplateColumns = firstPitch === "B" || firstPitch === "E" ? "1.25fr " : "1fr 0.25fr ";
 
   pitches.shift();
   pitches.pop();
@@ -70,6 +71,18 @@ function isWhiteNote(note) {
 }
 
 const allNotes = [
+  { position: 15, name: "C2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 16, name: "C#2", enharmonic: "Db2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 17, name: "D2", width: 3, overlap: 1, firstPositionWidth: 2 },
+  { position: 18, name: "D#2", enharmonic: "Eb2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 19, name: "E2", width: 2, overlap: 0, firstPositionWidth: 1 },
+  { position: 20, name: "F2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 21, name: "F#2", enharmonic: "Gb2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 22, name: "G2", width: 3, overlap: 1, firstPositionWidth: 2 },
+  { position: 23, name: "G#2", enharmonic: "Ab2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 24, name: "A2", width: 3, overlap: 1, firstPositionWidth: 2 },
+  { position: 25, name: "A#2", enharmonic: "Bb2", width: 2, overlap: 1, firstPositionWidth: 2 },
+  { position: 26, name: "B2", width: 2, overlap: 0, firstPositionWidth: 1 },
   { position: 27, name: "C3", width: 2, overlap: 1, firstPositionWidth: 2 },
   { position: 28, name: "C#3", enharmonic: "Db3", width: 2, overlap: 1, firstPositionWidth: 2 },
   { position: 29, name: "D3", width: 3, overlap: 1, firstPositionWidth: 2 },

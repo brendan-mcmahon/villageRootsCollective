@@ -1,9 +1,8 @@
-import { melody } from "./melody";
 import { playMelody } from "./playMelody";
 
 export function PlayButton(props) {
     return (
-        <button id="playButton" className="btn-icon" onClick={() => playMelody(props.synth, melody)}>
+        <button id="playButton" className="btn-icon" onClick={() => playMelody(props.synth, props.melody)}>
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="-2 -2 28 28">
                 <path
                     stroke="none"

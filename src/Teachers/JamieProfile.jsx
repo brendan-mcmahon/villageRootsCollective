@@ -9,7 +9,7 @@ export default function JamieProfile() {
 
   return (
     <div className="teacher-container">
-      <div id="mrs-k" className="teacher">
+      <div id="mrs-jamie" className="teacher">
         <Teacher bio={bio} profilePic={profilePic} pic1={pic1} pic2={pic2} />
       </div>
     </div>

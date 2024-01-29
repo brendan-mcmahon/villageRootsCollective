@@ -1,22 +1,12 @@
 export function Squares(props) {
-//   const height = `calc(80cqw / ${props.melodyLength})`;
+  //   const height = `calc(80cqw / ${props.melodyLength})`;
   const gridTemplateColumns = `repeat(${props.melodyLength}, 1fr`;
   const gridTemplateRows = `repeat(6, 1fr)`;
 
-  const isCurrentSquare = (i) => {
-    return props.cursor.index === i;
-  };
-
   const squareClass = (i) => {
-    let _class = "square";
     const row = props.guesses[Math.floor(i / props.melodyLength)];
     const guess = row[i % props.melodyLength];
-    if (guess) {
-      if (isCurrentSquare(i)) _class += " current";
-      if (guess.status) _class += ` ${guess.status}`;
-    }
-
-    return _class;
+    return`square ${guess.status}`;
   };
 
   return (
