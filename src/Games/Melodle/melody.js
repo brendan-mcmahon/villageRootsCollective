@@ -45,10 +45,27 @@ const heyJude = {
     ]
 }
 
+const furElise = {
+  tempo: 139,
+  accidentals: "sharp",
+  notes : [
+    { pitch: "E5", duration: "16n" },
+    { pitch: "D#5", duration: "16n" },
+    { pitch: "E5", duration: "16n" },
+    { pitch: "D#5", duration: "16n" },
+    { pitch: "E5", duration: "16n" },
+    { pitch: "B4", duration: "16n" },
+    { pitch: "D5", duration: "16n" },
+    { pitch: "C5", duration: "16n" },
+    { pitch: "A4", duration: "4n" },
+  ]
+}
+
 const melodies = {
-  "2024-01-28": beethovenFifth,
   "2024-01-29": imperialMarch,
-  "2024-01-30": heyJude
+  "2024-01-30": heyJude,
+  "2024-01-31": beethovenFifth,
+  "2024-02-01": furElise,
 
 };
 
