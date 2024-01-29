@@ -5,7 +5,7 @@ import TeacherBlock from "./TeacherBlock.jsx";
 import LinkBlocks from "./LinkBlocks.jsx";
 import Quotes from "./Quotes.jsx";
 import ProgramsDialog from "./ProgramsDialog.jsx";
-import logo from "../assets/Logo v3.png";
+import logo from "../assets/Logo.png";
 import { Link } from "react-router-dom";
 
 function Home() {
