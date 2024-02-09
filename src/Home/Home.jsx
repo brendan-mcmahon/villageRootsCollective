@@ -5,7 +5,7 @@ import TeacherBlock from "./TeacherBlock.jsx";
 import LinkBlocks from "./LinkBlocks.jsx";
 import Quotes from "./Quotes.jsx";
 import ProgramsDialog from "./ProgramsDialog.jsx";
-import logo from "../assets/Logo.png";
+import logo from "../assets/Logo v3.png";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -32,7 +32,7 @@ function Home() {
         <ProgramsDialog showProgramsDialog={showProgramsDialog} close={() => setShowProgramsDialog(false)} />
 
         <p className="copyright">
-          © 2024 Village Roots Collective (test)
+          © 2024 Village Roots Collective
           <br />
           <Link to="/terms-of-use">Terms of Use</Link>
         </p>

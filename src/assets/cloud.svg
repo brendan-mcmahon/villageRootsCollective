@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 125" xml:space="preserve">
+    <!-- https://codepen.io/Chokcoco/pen/OJWLXPY -->
+    <defs>
+        <filter id="roughpaper" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" result="noise" numOctaves="5" />
+            <feDiffuseLighting in="noise" lightingColor="#FFF" surfaceScale="1">
+                <feDistantLight azimuth="45" elevation="13" />
+            </feDiffuseLighting>
+        </filter>
+
+        <clipPath id="textclip">
+            <text x="10" y="50" font-family="Helvetica" font-weight="bold" font-size="1em">Photo Gallery</text>
+        </clipPath>
+    </defs>
+
+    <path filter="url(#roughpaper)" clip-path="url(#pathclip)"
+        d="M83.7255859,48.9931641c0.7919922-1.8564453,1.2416992-3.8730469,1.2416992-5.9912109  c0-9.0009766-7.8652344-16.2958984-17.5678711-16.2958984c-1.2563477,0-2.4790039,0.1269531-3.6601563,0.3583984  c-4.1005859-6.3808594-11.246582-10.6220703-19.3964844-10.6220703c-12.7329102,0-23.0556641,10.3222656-23.0556641,23.0566406  c0,1.3769531,0.1425781,2.71875,0.3735352,4.0283203c-0.1254883-0.0029297-0.2470703-0.0175781-0.3735352-0.0175781  c-10.7475586,0-19.4599609,8.0820313-19.4599609,18.0488281c0,9.9697266,8.7124023,18.0527344,19.4599609,18.0527344  c2.7128906,0,5.2939453-0.5175781,7.6401367-1.4482422c5.152832,3.2978516,12.737793,5.3945313,21.2172852,5.3945313  c8.2011719,0,15.5571289-1.9648438,20.6948242-5.0742188c2.2924805,0.7197266,4.7890625,1.1279297,7.4111328,1.1279297  c11.0029297,0,19.9223633-6.9931641,19.9223633-15.6142578C98.1728516,56.8632813,92.0634766,50.8574219,83.7255859,48.9931641z" />
+    <circle cx="110" cy="110" r="100" fill="#9c6" filter="url(#roughpaper-green)" clip-path="url(#textclip)" />
+</svg>

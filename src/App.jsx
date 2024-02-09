@@ -8,6 +8,8 @@ import NotFound from "./NotFound";
 import JamieProfile from "./Teachers/JamieProfile";
 import KrystallProfile from "./Teachers/KrystallProfile";
 import TermsOfUse from "./TermsOfUse";
+// import Gallery from "./Gallery";
+// import Paper from "./Paper";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/enrollment" element={<Enrollment />} />
         <Route path="/melodle" element={<Melodle />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+        {/* <Route path="/gallery" element={<Gallery />} /> */}
+        {/* <Route path="/paper" element={<Paper />} /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

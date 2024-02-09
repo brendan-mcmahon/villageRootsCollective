@@ -26,7 +26,7 @@ export const bios = [
   {
     name: "Mrs. K",
     blurb1:
-      "Hello and Welcome to Village Roots Collective! I’m so happy you’re here! My name is Krystall DeBoy, but you can call me Mrs. K, and I will be your teacher this year. A little about myself… I live in Hendricks County with my amazing husband Joe and our 2 beautiful children, Isaac and Addison. We also share our home with our 2 cats, Max and Lucky. In my free time I love to ground myself with the Earth. Nature is my happy and healing place☺ I’m excited for what’s to come and I look forward to getting to know you and your child this year!",
+      "Hello and Welcome to Village Roots Collective! I’m so happy you’re here! My name is Krystall DeBoy, but you can call me Mrs. K, and I will be your teacher this year. A little about myself… I live in Hendricks County with my amazing husband Joe and our 2 beautiful children, Isaac and Addison. We also share our home with our 2 cats, Max and Lucky, and our Great Pyrenees, Clyde. In my free time I love to ground myself with the Earth. Nature is my happy and healing place☺ I’m excited for what’s to come and I look forward to getting to know you and your child this year!",
     blurb2:
       "I started in the co-op world in 2013 as a parent/stay at home mom with my son. I joined the board as Co-President and held that position until May 2016, when both of my kids went to public school full time. In November 2016, I accepted a position in my children's school district working in Special Education with children of all abilities until May 2018. In August of 2018 I became a co-op teacher and have been teaching ever since.",
     profilePic: "../assets/Mrs-K-profile.png",

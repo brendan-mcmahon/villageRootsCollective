@@ -7,12 +7,13 @@
 * Copyright
 
 ## Website stuff
-* Favicon
+* Add a loading spinner
+* Right-size the images
 * Logo
 * a11y
+* CMS System??
 
 ## Fixes
-* New version of Krystall's house with the gnome behind the wall
 
 ## Fun stuff
 * Melodle

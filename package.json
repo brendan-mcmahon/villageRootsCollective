@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-photo-album": "^2.3.1",
     "react-router-dom": "^6.21.3",
     "react-transition-group": "^4.4.5",
     "sass": "^1.70.0",
-    "tone": "^14.7.77"
+    "tone": "^14.7.77",
+    "yet-another-react-lightbox": "^3.16.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
